@@ -34,11 +34,14 @@
                               window.location = url;
                         }
                   };
+
+                  var geradorIdUnico = 'TON_' + Date.now() + '_' + Math.floor(Math.random() * 1000);
+                  
                   gtag('event', 'conversion', {
                         'send_to': 'AW-10845413366/ear6CNrHqrEcEPa_v7Mo',
                         'value': transactionValue,
                         'currency': 'BRL',
-                        'transaction_id': '', // Opcional: pode ser preenchido dinamicamente se tiver um gerador de ID
+                        'transaction_id': geradorIdUnico,
                         'event_callback': callback
                   });
                   return false;
