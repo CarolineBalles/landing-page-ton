@@ -26,6 +26,24 @@
 
             gtag('config', 'AW-10845413366');
       </script>
+      <!-- Event snippet for Compra Maquininha Ton conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+      <script>
+            function gtag_report_conversion(url, transactionValue) {
+                  var callback = function () {
+                        if (typeof(url) != 'undefined') {
+                              window.location = url;
+                        }
+                  };
+                  gtag('event', 'conversion', {
+                        'send_to': 'AW-10845413366/ear6CNrHqrEcEPa_v7Mo',
+                        'value': transactionValue,
+                        'currency': 'BRL',
+                        'transaction_id': '', // Opcional: pode ser preenchido dinamicamente se tiver um gerador de ID
+                        'event_callback': callback
+                  });
+                  return false;
+            }
+      </script>
 </head>
 
 <body>
@@ -392,7 +410,7 @@
                                     </div>
 
                                     <a href="https://www.ton.com.br/maquininha/t3-smart?referrer=9C046FFA-2335-458C-940B-75602ACF1102&userAnticipation=0&utm_medium=invite_share&utm_source=revendedor"
-                                          target="_blank" class="btn-order">Pedir T3 Smart</a>
+                                          target="_blank" class="btn-order" onclick="return gtag_report_conversion(this.href, 200.00);">Pedir T3 Smart</a>
 
                                     <ul class="specs-list">
                                           <li><i class="bi bi-sim"></i> Com Chip 4G e Wi-Fi</li>
@@ -430,7 +448,7 @@
                                     <div class="free-shipping"><i class="bi bi-truck"></i> Frete Grátis para todo Brasil
                                     </div>
                                     <a href="https://www.ton.com.br/maquininha/t3?referrer=9C046FFA-2335-458C-940B-75602ACF1102&userAnticipation=0&utm_medium=invite_share&utm_source=revendedor"
-                                          target="_blank" class="btn-order">Pedir T3</a>
+                                          target="_blank" class="btn-order" onclick="return gtag_report_conversion(this.href, 150.00);">Pedir T3</a>
                                     <ul class="specs-list">
                                           <li><i class="bi bi-sim"></i> Com Chip 3G e Wi-Fi</li>
                                           <li><i class="bi bi-contactless"></i> Receba por aproximação (NFC)</li>
@@ -465,7 +483,7 @@
                                     <div class="free-shipping"><i class="bi bi-truck"></i> Frete Grátis para todo Brasil
                                     </div>
                                     <a href="https://www.ton.com.br/maquininha/t2?referrer=9C046FFA-2335-458C-940B-75602ACF1102&userAnticipation=0&utm_medium=invite_share&utm_source=revendedor"
-                                          target="_blank" class="btn-order">Pedir T2</a>
+                                          target="_blank" class="btn-order" onclick="return gtag_report_conversion(this.href, 60.00);">Pedir T2</a>
                                     <ul class="specs-list">
                                           <li><i class="bi bi-sim"></i> Com Chip 3G e Wi-Fi</li>
                                           <li><i class="bi bi-contactless"></i> Receba por aproximação (NFC)</li>
@@ -500,7 +518,7 @@
                                     <div class="free-shipping"><i class="bi bi-truck"></i> Frete Grátis para todo Brasil
                                     </div>
                                     <a href="https://www.ton.com.br/maquininha/t1?referrer=9C046FFA-2335-458C-940B-75602ACF1102&userAnticipation=0&utm_medium=invite_share&utm_source=revendedor"
-                                          target="_blank" class="btn-order">Pedir T1</a>
+                                          target="_blank" class="btn-order" onclick="return gtag_report_conversion(this.href, 40.00);">Pedir T1</a>
                                     <ul class="specs-list">
                                           <li><i class="bi bi-phone"></i> Precisa de celular com internet</li>
                                           <li><i class="bi bi-contactless"></i> Receba por aproximação (NFC)</li>
