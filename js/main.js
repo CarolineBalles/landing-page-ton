@@ -187,6 +187,27 @@ document.addEventListener("DOMContentLoaded", function () {
       elBrand.addEventListener('change', calculateSimulation);
       elInstallments.addEventListener('change', calculateSimulation);
 
+      // ==========================================
+      // EVENTO PERSONALIZADO: Rastrea quem usou o simulador (Apenas 1x)
+      // ==========================================
+      let simuladorUsado = false;
+
+      function dispararEventoSimulador() {
+            // Se o pixel estiver ativo e o evento ainda não foi disparado nesta visita
+            if (!simuladorUsado && typeof fbq === 'function') {
+                  fbq('trackCustom', 'SimulouTaxas');
+                  console.log('Evento Customizado: SimulouTaxas disparado para o Facebook!');
+                  simuladorUsado = true; // Trava para não disparar dezenas de vezes enquanto o cliente arrasta a barra
+            }
+      }
+
+      // Atrela o disparo do evento a qualquer interação com os campos do simulador
+      elValue.addEventListener('change', dispararEventoSimulador); // Usamos 'change' em vez de 'input' para disparar só ao soltar a barra
+      elPlan.addEventListener('change', dispararEventoSimulador);
+      elReceipt.addEventListener('change', dispararEventoSimulador);
+      elBrand.addEventListener('change', dispararEventoSimulador);
+      elInstallments.addEventListener('change', dispararEventoSimulador);
+
       // Inicia a calculadora no carregamento da página
       calculateSimulation();
 
@@ -255,6 +276,16 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Dispara o evento de "Iniciar Checkout"
                         fbq('track', 'InitiateCheckout');
                         console.log('Evento InitiateCheckout disparado para o Facebook!');
+                  }
+            });
+      });
+
+      const whatsappButtons = document.querySelectorAll('.btn-whatsapp-float, .btn-rescue');
+      whatsappButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                  if (typeof fbq === 'function') {
+                        fbq('track', 'Contact');
+                        console.log('Evento Contact (WhatsApp) disparado para o Facebook!');
                   }
             });
       });
