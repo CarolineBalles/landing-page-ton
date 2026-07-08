@@ -98,7 +98,7 @@
                                     Aproveite o seu desconto agora e garanta essas condições exclusivas até 31/07.
                               </p>
 
-                              <button type="button" class="btn w-100" data-bs-dismiss="modal"
+                              <button type="button" id="btnAtivarBeneficios" class="btn w-100" data-bs-dismiss="modal"
                                     style="background-color: #85ff00; color: #111; font-weight: 800; border-radius: 30px; padding: 12px; font-size: 1.1rem; border: none; transition: 0.2s;">
                                     ATIVAR MEUS BENEFÍCIOS
                               </button>
@@ -281,28 +281,7 @@
                   </div>
 
                   <div class="sim-card-box text-start">
-                        <!-- FUSÃO DA INFORMAÇÃO DE TAXAS REDUNDANTES AQUI -->
                         <div class="sim-left d-flex flex-column justify-content-between p-4">
-                              <!-- <div class="rates-fusion-badge">
-                                    <h4
-                                          style="color: var(--neon-green); font-weight: 900; font-family: var(--font-title); font-size: 2rem; margin-bottom: 5px;">
-                                          As Melhores Taxas</h4>
-                                    <p style="color: white; font-size: 0.9rem; margin-bottom: 20px;">Comprovado: O maior
-                                          retorno para o seu bolso.</p>
-
-                                    <div class="fusion-rate-item">
-                                          <span class="perc">0%</span>
-                                          <span class="type">no Pix</span>
-                                    </div>
-                                    <div class="fusion-rate-item">
-                                          <span class="perc">0,57%</span>
-                                          <span class="type">no Débito e Crédito</span>
-                                    </div>
-                                    <div class="fusion-rate-item">
-                                          <span class="perc">7,97%</span>
-                                          <span class="type">em 12x no Crédito</span>
-                                    </div>
-                              </div> -->
                         </div>
 
                         <div class="sim-right">
@@ -994,7 +973,7 @@
       <!-- ============================================================ -->
       <!-- TESTIMONIALS — Qualitative social proof                      -->
       <!-- ============================================================ -->
-      <section class="sec-testimonials fade-up">
+      <section class="sec-testimonials fade-up" id="depoimentos">
             <div class="container">
                   <div class="text-center mb-5 fade-up">
                         <div class="sec-title">Porquê nossos clientes amam o Ton:</div>
@@ -1053,7 +1032,7 @@
                                           <div class="author-name">Andréia</div>
                                           <div class="author-role">Vendeu com a Maquininha Ton</div>
                                     </div>
-                                    <img src="images/https://i.pravatar.cc/100?img=5" class="avatar-img" alt="Foto">
+                                    <img src="https://i.pravatar.cc/100?img=5" class="avatar-img" alt="Foto">
                               </div>
                         </div>
 
@@ -1071,7 +1050,7 @@
                                           <div class="author-name">Simone Viana</div>
                                           <div class="author-role">Utilizou o suporte do Ton</div>
                                     </div>
-                                    <img src="images/https://i.pravatar.cc/100?img=9" class="avatar-img" alt="Foto">
+                                    <img src="https://i.pravatar.cc/100?img=9" class="avatar-img" alt="Foto">
                               </div>
                         </div>
 
@@ -1147,7 +1126,7 @@
                                     <div class="col-sm-6 col-lg-4">
                                           <div class="ton-card">
                                                 <div class="tag-segment">Ideal para Gestão e Alto Volume</div>
-                                                <img src="images/T3 Smart.png" alt="T3 Smart Ton Mega+" loading="lazy">
+                                                <img src="images/T3_Smart.png" alt="T3 Smart Ton Mega+" loading="lazy">
                                                 <div class="ton-card-title">T3 Smart Ton Mega+</div>
                                                 <div class="ton-card-tags">
                                                       <span class="tag-discount">DE R$ 191,88</span>
@@ -1294,7 +1273,7 @@
                                                 <div class="tag-segment"
                                                       style="background-color: #111; color: var(--neon-green);">Ideal
                                                       para Gestão e Alto Volume</div>
-                                                <img src="images/T3 Smart.png" alt="T3 Smart Ton Black" loading="lazy">
+                                                <img src="images/T3_Smart.png" alt="T3 Smart Ton Black" loading="lazy">
                                                 <div class="ton-card-title">T3 Smart Ton Black</div>
                                                 <div class="ton-card-tags">
                                                       <span class="tag-discount">DE R$ 189,00</span>
@@ -1459,7 +1438,7 @@
       <!-- ============================================================ -->
       <!-- BRANDS                                                       -->
       <!-- ============================================================ -->
-      <section class="sec-brands-new fade-up">
+      <section class="sec-brands-new fade-up" id="bandeiras">
             <div class="container">
                   <div class="text-center mb-5 fade-up">
                         <div class="sec-title">Aceite mais de 50 bandeiras no <span>débito, crédito e vouchers</span>
@@ -1732,35 +1711,6 @@
             </div>
       </div>
 
-      <!-- <div id="cookieBanner" class="cookie-banner-wrap d-none">
-            <div class="container">
-                  <p class="cookie-text mb-3">
-                        Utilizamos cookies para otimizar sua experiência e personalizar anúncios, de acordo com nosso 
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="cookie-link">Aviso de Cookies</a>.
-                  </p>
-                  
-                  <div class="d-flex gap-4 mb-3 flex-wrap" style="font-size: 0.85rem; color: #555;">
-                        <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="cookieEssencial" checked disabled>
-                              <label class="form-check-label fw-bold" for="cookieEssencial">Essenciais (Obrigatórios)</label>
-                        </div>
-                        <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="cookieMarketing">
-                              <label class="form-check-label" for="cookieMarketing">Marketing</label>
-                        </div>
-                        <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="cookieAnaliticos">
-                              <label class="form-check-label" for="cookieAnaliticos">Analíticos</label>
-                        </div>
-                  </div>
-
-                  <div class="d-flex gap-2 flex-wrap">
-                        <button id="btnSalvarPreferencias" class="btn-cookie-outline">Salvar preferências</button>
-                        <button id="acceptCookies" class="btn-cookie-solid">Aceitar todos</button>
-                  </div>
-            </div>
-      </div> -->
-
       <a href="https://api.whatsapp.com/send/?phone=5511975971856&text=Ol%C3%A1%2C+Gostaria+de+saber+mais+sobre+a+maquininha+de+cartão.&type=phone_number&app_absent=0"
             target="_blank" class="btn-whatsapp-float">
             <i class="bi bi-whatsapp"></i> Peça no WhatsApp
@@ -1771,12 +1721,52 @@
       <script src="js/main.js"></script>
 
       <script>
-            // Aciona o Modal de 15% OFF automaticamente quando a página carrega
+            // Aciona o Modal de 15% OFF / Cashback de forma inteligente, de acordo com a etapa do funil
+            // que trouxe o visitante até a página. Use o parâmetro ?etapa=topo | meio | fundo no link do anúncio.
+            // Ex.: seusite.com/?etapa=fundo  -> anúncio de Fundo de Funil (BOFU)
             window.addEventListener('load', function () {
+                  var params = new URLSearchParams(window.location.search);
+                  var etapa = (params.get('etapa') || params.get('utm_content') || '').toLowerCase();
+
+                  var delay;
+                  if (etapa.indexOf('fundo') !== -1 || etapa.indexOf('bofu') !== -1) {
+                        delay = 800; // Fundo de funil: já conhece a oferta, reforça a promoção quase imediatamente
+                  } else if (etapa.indexOf('meio') !== -1 || etapa.indexOf('mofu') !== -1) {
+                        delay = 6000; // Meio de funil: dá tempo de ver prova social antes da oferta
+                  } else {
+                        delay = 14000; // Topo de funil / tráfego direto: prioriza entender o benefício antes da oferta
+                  }
+
                   setTimeout(function () {
+                        if (sessionStorage.getItem('cupomModalFechado') === '1') return;
                         var cupomModal = new bootstrap.Modal(document.getElementById('cupomModal'));
                         cupomModal.show();
-                  }, 1500); // Aparece após 1,5 segundos para não assustar o usuário
+                  }, delay);
+            });
+
+            // Não repete o pop-up se o visitante já fechou nesta sessão (evita incomodar em novas páginas/recargas)
+            document.addEventListener('DOMContentLoaded', function () {
+                  var modalEl = document.getElementById('cupomModal');
+                  var btnAtivar = document.getElementById('btnAtivarBeneficios');
+                  var fechadoPeloBotao = false;
+
+                  if (btnAtivar) {
+                        btnAtivar.addEventListener('click', function () {
+                              fechadoPeloBotao = true;
+                        });
+                  }
+
+                  if (modalEl) {
+                        modalEl.addEventListener('hidden.bs.modal', function () {
+                              sessionStorage.setItem('cupomModalFechado', '1');
+                              // "ATIVAR MEUS BENEFÍCIOS" leva direto para os planos com o desconto/cashback já em destaque
+                              if (fechadoPeloBotao) {
+                                    var destino = document.getElementById('models');
+                                    if (destino) destino.scrollIntoView({ behavior: 'smooth' });
+                                    fechadoPeloBotao = false;
+                              }
+                        });
+                  }
             });
       </script>
 

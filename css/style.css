@@ -920,7 +920,7 @@ footer a:hover {
 
 .sim-left {
       /* background: #79f71c; */
-      background: var(--dark-green) url('../images/t3 smart.png') center center / 80% no-repeat;
+      background: var(--dark-green) url('../images/T3_Smart.png') center center / 80% no-repeat;
       width: 35%;
       position: relative;
       min-height: 300px;
@@ -1177,7 +1177,7 @@ footer a:hover {
 
 /* --- Fusão das Taxas Redundantes no Simulador --- */
 /* .sim-left {
-      background: linear-gradient(135deg, rgba(26, 74, 26, 0.9), rgba(45, 122, 45, 0.9)), url('../images/t3 smart.png') center bottom / 60% no-repeat;
+      background: linear-gradient(135deg, rgba(26, 74, 26, 0.9), rgba(45, 122, 45, 0.9)), url('../images/T3_Smart.png') center bottom / 60% no-repeat;
       width: 35%;
       position: relative;
       min-height: 350px;
