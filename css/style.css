@@ -1130,6 +1130,7 @@ footer a:hover {
             font-size: 2.2rem !important;
             line-height: 1.1;
       }
+
       .sec-new-models h2, .sec-brands-new h2 {
             font-size: 2.2rem !important;
       }
@@ -1151,9 +1152,11 @@ footer a:hover {
             flex-direction: column;
             padding: 20px 15px; /* Reduz o espaço interno nas laterais */
       }
+
       .res-row {
             flex-wrap: wrap; /* Se não couber, joga para a linha de baixo sem cortar */
       }
+
       .res-value {
             font-size: 1.25rem !important; /* Diminui um pouco a fonte dos R$ no mobile */
       }
@@ -1182,6 +1185,7 @@ footer a:hover {
             display: flex;
             gap: 0 !important;
       }
+
       .ton-nav-pills .nav-link {
             width: 100%;
             margin-bottom: 15px;
@@ -1200,18 +1204,31 @@ footer a:hover {
       }
 
       .cookie-banner-wrap .d-flex {
-            flex-direction: column; /* Empilha os botões */
+            flex-direction: column;
             width: 100%;
-            gap: 12px !important; /* Espaço entre os botões */
+            gap: 12px !important;
+      }
+
+      .cookie-banner-wrap button:last-child {
+            margin-bottom: 0 !important;
       }
 
       .btn-cookie-outline, .btn-cookie-solid {
-            width: 100%; /* Botões ocupam a tela toda para facilitar o clique */
+            width: 100%;
+            margin-bottom: 12px !important;
+      }
+      
+      .step-num {
+            margin-right: 18px !important;
+            flex-shrink: 0;
       }
 
-      .step-num {
-            margin-right: 18px !important; /* Força o espaço à direita do círculo verde */
-            flex-shrink: 0; /* Impede que o círculo seja esmagado pelo texto */
+      .custom-table-wrap {
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch;
+      }
+      .custom-table-wrap table {
+            min-width: 700px;
       }
 }
 
