@@ -1090,16 +1090,47 @@ footer a:hover {
             padding: 50px 0 40px;
       }
 
+      .hero h1 {
+            font-size: 2.5rem !important;
+            line-height: 1.1;
+      }
+
+      .hero .subtitle {
+            font-size: 1rem;
+      }
+
       .hero-img-wrap img {
             max-height: 260px;
       }
 
       .hero-rates {
+            gap: 15px;
             justify-content: center;
+      }
+
+      .rate-pill {
+            flex: 1 1 calc(50% - 15px); /* Faz com que fiquem 2 lado a lado */
+            margin-bottom: 10px;
+            padding: 15px 10px;
       }
 
       body {
             padding-bottom: 60px;
+      }
+
+      .btn-hero-cta {
+            font-size: 0.95rem !important;
+            padding: 14px 20px !important;
+            white-space: nowrap;
+            width: auto;
+      }
+
+      .sec-title {
+            font-size: 2.2rem !important;
+            line-height: 1.1;
+      }
+      .sec-new-models h2, .sec-brands-new h2 {
+            font-size: 2.2rem !important;
       }
 
       .accordion-button {
@@ -1112,7 +1143,7 @@ footer a:hover {
 
       .sim-left {
             /* width: 100%;
-    height: 150px; */
+            height: 150px; */
             display: none;
       }
 
@@ -1134,6 +1165,21 @@ footer a:hover {
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
+      }
+
+      .ton-nav-pills {
+            flex-direction: column;
+            gap: 15px !important;
+      }
+      .ton-nav-pills .nav-link {
+            width: 100%;
+      }
+      
+      .sec-final-cta .btn-hero-cta,
+      .sec-final-cta .btn-rescue {
+            width: 100%;
+            margin-bottom: 10px;
+            white-space: normal;
       }
 }
 
@@ -1486,5 +1532,52 @@ footer a:hover {
       }
       100% {
             transform: translateX(-50%); /* Move exatamente a metade (já que duplicamos o conteúdo) para ser infinito */
+      }
+}
+
+/* ANIMAÇÃO DAS BANDEIRAS (MARQUEE) */
+.brands-marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      /* Opcional: Adiciona um gradiente nas bordas para dar efeito de sumiço */
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.brands-marquee-content {
+      display: inline-block;
+      animation: slide-brands 20s linear infinite;
+}
+
+.brands-marquee-content img {
+      height: 50px; /* Altura padrão para desktop e mobile */
+      margin: 0 25px; /* Espaço entre as bandeiras */
+      vertical-align: middle;
+}
+
+.brands-marquee-content:hover {
+      animation-play-state: paused; /* Pausa ao passar o mouse */
+}
+
+@keyframes slide-brands {
+      0% {
+            transform: translateX(0);
+      }
+      100% {
+            transform: translateX(-50%); /* Move metade do conteúdo duplicado */
+      }
+}
+
+/* Opcional: Diminuir o tamanho das bandeiras apenas em celulares pequenos para caber melhor no carrossel */
+@media (max-width: 576px) {
+      .brands-marquee-content img {
+            height: 40px;
+            margin: 0 15px;
       }
 }
