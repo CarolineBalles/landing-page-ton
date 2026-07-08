@@ -1104,14 +1104,15 @@ footer a:hover {
       }
 
       .hero-rates {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 15px;
             justify-content: center;
       }
 
       .rate-pill {
-            flex: 1 1 calc(50% - 15px); /* Faz com que fiquem 2 lado a lado */
-            margin-bottom: 10px;
-            padding: 15px 10px;
+            margin-bottom: 0;
+            width: 100%;
       }
 
       body {
@@ -1142,15 +1143,11 @@ footer a:hover {
       }
 
       .sim-left {
-            /* width: 100%;
-            height: 150px; */
-            display: none;
+            display: none !important; /* O !important garante que a barra suma no mobile, resolvendo o bug da imagem */
       }
-
+      
       .sim-right {
             width: 100%;
-            flex-direction: column;
-            /* padding: 20px; */
             padding: 30px 20px;
       }
 
@@ -1169,10 +1166,12 @@ footer a:hover {
 
       .ton-nav-pills {
             flex-direction: column;
-            gap: 15px !important;
+            display: flex;
+            gap: 0 !important;
       }
       .ton-nav-pills .nav-link {
             width: 100%;
+            margin-bottom: 15px;
       }
       
       .sec-final-cta .btn-hero-cta,
@@ -1180,6 +1179,7 @@ footer a:hover {
             width: 100%;
             margin-bottom: 10px;
             white-space: normal;
+            font-size: 0.95rem !important;
       }
 }
 
